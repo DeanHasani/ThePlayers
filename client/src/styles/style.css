@@ -1,0 +1,181 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.fade {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .fade {
+    gap: 10px;
+  }
+}
+
+.spinner {
+  width: 245px;
+  height: 245px;
+  margin-bottom: 20px;
+  transition: transform 1s ease-in-out;
+  animation: spinner 6s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .spinner {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Gotham Bold', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.5s ease, filter 0.5s ease;
+  z-index: 1;
+  /* Added fade-in animation for Enter the Game button */
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.btn:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #ffffff 0%, #cccccc 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0 100%,
+    0 4px,
+    4px 4px,
+    4px calc(100% - 4px),
+    calc(100% - 8px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 8px),
+    calc(100% - 4px) 4px,
+    0 4px
+  );
+  z-index: -1;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.btn:hover {
+  color: black;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+}
+
+.btn:hover:before {
+  opacity: 0.3;
+}
+
+.btn:hover:after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 150px;
+    height: 35px;
+    font-size: 10px;
+  }
+}
+
+@media (max-height: 600px) {
+  .fade {
+    gap: 5px;
+  }
+  .spinner {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 5px;
+  }
+  .btn {
+    width: 120px;
+    height: 30px;
+    font-size: 9px;
+  }
+}
