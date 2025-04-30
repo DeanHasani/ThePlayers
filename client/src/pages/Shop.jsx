@@ -522,8 +522,6 @@ const Shop = () => {
             setShowMenu={setShowMenu}
           />
         </div>
-        <h1 className="shop-title">SHOP THE PLAYERS</h1>
-
         {alertMessage && (
           <div className="cart-alert">
             {alertMessage}

@@ -4,6 +4,7 @@ import bagIcon from '../assets/bag-icon.svg';
 import heartIcon from '../assets/heart-icon.svg';
 import profileIcon from '../assets/profile-icon.svg';
 import searchIcon from '../assets/search-icon.svg';
+import tpcLogo from '../assets/tpc.png';
 
 const Navbar = ({
   isShopPage = false,
@@ -68,6 +69,9 @@ const Navbar = ({
               </ul>
             </div>
           )}
+        </div>
+        <div className="navbar-logo">
+          <img src={tpcLogo} alt="TPC Logo" />
         </div>
         <div className="auth-status">
           <div className={`search-item ${isSearchOpen ? 'open' : ''}`}>
