@@ -17,7 +17,7 @@ body {
 /* Mobile responsiveness change */
 @media (max-width: 768px) {
   .shop-container {
-    padding: 10px;
+    padding: 5px;
     padding-bottom: 120px; /* Adjusted for mobile */
   }
 }
@@ -1599,15 +1599,23 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 37px;
   font-size: 1.5em;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
+
+/* Mobile responsiveness change */
+@media (max-width: 768px) {
+  .menu-toggle {
+    margin-top: -7px;
+    position: relative;
+  }
+}  
 
 .menu-toggle:hover {
   background-color: #555;
@@ -1621,7 +1629,7 @@ body {
   border: 1px solid #444;
   border-radius: 4px;
   padding: 10px;
-  width: 150px;
+  width: 100px;
   z-index: 100;
   text-align: left;
 }
@@ -1629,9 +1637,9 @@ body {
 /* Mobile responsiveness change */
 @media (max-width: 768px) {
   .menu-content {
-    width: 120px;
+    width: 100px;
     padding: 8px;
-    top: 45px;
+    top: 40px;
   }
 }
 
@@ -1781,6 +1789,15 @@ body {
   margin-top: -50px;
 }
 
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin-top: -40px;
+    margin-left: 120px; /* Remove negative margin to prevent top-left shift */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .navbar-logo img {
   width: 250px; /* Adjust size as needed */
   height: 95px;
@@ -1796,7 +1813,7 @@ body {
 /* Mobile responsiveness change */
 @media (max-width: 768px) {
   .navbar-logo img {
-    width: 36px; /* Smaller size for mobile */
+    width: 76px; /* Smaller size for mobile */
     height: 36px;
   }
 }
