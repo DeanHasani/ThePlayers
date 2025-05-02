@@ -22,6 +22,7 @@ const Shop = () => {
   const [userRole, setUserRole] = useState(null);
   const [userName, setUserName] = useState(null);
   const [imagePreviews, setImagePreviews] = useState([null, null, null]);
+  const [imageError, setImageError] = useState(''); // New state for image error
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [productToDelete, setProductToDelete] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -130,6 +131,24 @@ const Shop = () => {
 
   const handleFileChange = (e, index) => {
     const file = e.target.files[0];
+    if (!file) return;
+
+    // Check for duplicates in newProduct.images
+    const isDuplicate = newProduct.images.some(
+      (existingFile, i) =>
+        i !== index &&
+        existingFile &&
+        existingFile.name === file.name &&
+        existingFile.size === file.size
+    );
+
+    if (isDuplicate) {
+      setImageError('This photo is already selected. Please choose a different photo.');
+      e.target.value = ''; // Reset input
+      setTimeout(() => setImageError(''), 3000); // Clear error after 3s
+      return;
+    }
+
     const updatedImages = [...newProduct.images];
     updatedImages[index] = file;
     setNewProduct({ ...newProduct, images: updatedImages });
@@ -634,6 +653,8 @@ const Shop = () => {
                   </>
                 )}
               </div>
+
+              {imageError && <p className="error">{imageError}</p>}
 
               <select name="category" value={newProduct.category} onChange={handleInputChange}>
                 <option value="clothing">Clothing</option>
