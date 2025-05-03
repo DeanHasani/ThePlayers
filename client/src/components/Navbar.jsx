@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import bagIcon from '../assets/bag-icon.svg';
 import heartIcon from '../assets/heart-icon.svg';
 import profileIcon from '../assets/profile-icon.svg';
@@ -71,7 +71,9 @@ const Navbar = ({
           )}
         </div>
         <div className="navbar-logo">
+          <NavLink to="/home">
           <img src={tpcLogo} alt="TPC Logo" />
+          </NavLink>
         </div>
         <div className="auth-status">
           <div className={`search-item ${isSearchOpen ? 'open' : ''}`}>

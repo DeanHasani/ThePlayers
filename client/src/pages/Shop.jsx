@@ -4,11 +4,8 @@ import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 import Navbar from '../components/Navbar';
 import '../styles/main.css';
-import bagIcon from '../assets/bag-icon.svg';
 import heartIcon from '../assets/heart-icon.svg';
 import heartFilledIcon from '../assets/heart-filled-icon.svg';
-import profileIcon from '../assets/profile-icon.svg';
-import searchIcon from '../assets/search-icon.svg';
 import Footer from '../components/Footer';
 
 const Shop = () => {
