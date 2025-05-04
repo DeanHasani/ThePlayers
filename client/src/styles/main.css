@@ -817,18 +817,18 @@ body {
 
 /* Webkit-based browsers (Chrome, Safari, Edge) scrollbar styles */
 .add-product-sidebar::-webkit-scrollbar {
-  width: 6px; /* Thinner scrollbar */
+  width: 6px; 
 }
 
 .add-product-sidebar::-webkit-scrollbar-track {
   background: transparent; /* Transparent track to blend with sidebar */
-  margin-right: 8px; /* Slight offset from content */
+  margin-right: 8px; 
 }
 
 .add-product-sidebar::-webkit-scrollbar-thumb {
   background: #C0C0C0; /* Light gray thumb */
   border-radius: 4px; /* Rounded edges */
-  border: 1px solid transparent; /* Transparent border to avoid container effect */
+  border: 1px solid transparent; 
   background-clip: content-box; /* Ensure border doesn't affect thumb color */
 }
 
@@ -876,7 +876,7 @@ body {
   overflow-y: auto;
 }
 
-/* CHANGE: Adjusted modal width on mobile for single-column layout */
+/* Adjusted modal width on mobile for single-column layout */
 @media (max-width: 768px) {
   .cart-modal {
     width: 90%;
@@ -896,15 +896,15 @@ body {
   gap: 20px;
 }
 
-/* CHANGE: Updated mobile styles for wishlist modal to use single-column grid and prevent button border clipping */
+/* Updated mobile styles for wishlist modal to use single-column grid and prevent button border clipping */
 @media (max-width: 768px) {
   .cart-items {
     grid-template-columns: 1fr; /* Changed to single-column layout for more space */
     gap: 10px; /* Adjusted gap for compact layout */
   }
   .cart-product-card {
-    padding: 8px; /* Adjusted padding to balance space */
-    max-width: 100%; /* Ensure card uses full available width */
+    padding: 8px; 
+    max-width: 100%; 
     overflow: visible; /* Prevent clipping of content */
   }
   .cart-product-image {
@@ -915,8 +915,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* Adjusted gap for compact layout */
-    width: 100%; /* Ensure full width usage */
+    gap: 5px; 
+    width: 100%; 
   }
   .wishlist-buttons {
     display: flex;
