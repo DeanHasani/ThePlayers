@@ -921,23 +921,23 @@ body {
   .wishlist-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjusted gap between buttons */
-    width: 100%; /* Use full width of card */
+    gap: 10px; 
+    width: 100%; 
     flex-wrap: wrap; /* Allow wrapping if needed */
   }
   .cart-product-info button {
     width: 120px; /* Increased width to ensure borders are fully visible */
-    min-width: 110px; /* Minimum width for shorter text */
-    padding: 3px 6px; /* Reduced padding to minimize footprint */
-    font-size: 0.65em; /* Smaller font size for better fit */
+    min-width: 110px; 
+    padding: 3px 6px; 
+    font-size: 0.65em; 
     margin: 2px 0;
     text-align: center;
-    white-space: nowrap; /* Prevent text wrapping */
-    box-sizing: border-box; /* Ensure borders are included in width */
+    white-space: nowrap; 
+    box-sizing: border-box; 
   }
   .cart-product-info button.remove-one-btn,
   .cart-product-info button.add-to-cart-btn {
-    width: 120px; /* Match button width */
+    width: 120px; 
   }
 }
 
