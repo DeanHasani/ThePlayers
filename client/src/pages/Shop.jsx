@@ -40,7 +40,7 @@ const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showMenu, setShowMenu] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const itemsPerPage = 12;
+  const itemsPerPage = 8;
   const navigate = useNavigate();
   const profileMenuRef = useRef(null);
   const searchInputRef = useRef(null);
