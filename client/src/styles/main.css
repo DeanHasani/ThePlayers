@@ -317,12 +317,14 @@ body {
 
 /* Top Bar Alignment */
 .top-bar {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
+  top: 0;
 }
 
 /* Mobile responsiveness change */
@@ -1799,8 +1801,8 @@ body {
 }
 
 .navbar-logo img {
-  width: 250px; /* Adjust size as needed */
-  height: 95px;
+  width: 290px; /* Adjust size as needed */
+  height: 100px;
   filter: brightness(1.3); /* Match brightness of other icons */
   transition: transform 0.2s ease, filter 0.2s ease; /* Match icon hover effects */
 }
